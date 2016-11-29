@@ -14,30 +14,33 @@ define([],function(require,exports,module){
 							<span class="mui-icon mui-icon-left-nav"></span>\
 							<span class="header_text">返回 </span>\
 						</button>\
-						<span class="search_btn" v-if="search" @click="search_click"></span>\
+						<span class="search_btn" v-if="search" @click="open" href=""></span>\
 					</header>',
 		methods:{
-			search_click : _open_search
+			open : _open,
 		}
 	});
 	
 	Vue.component('wang-footer',{
+		methods:{
+			open : _open
+		},
 		template : '\
 			<nav class="mui-bar mui-bar-tab footer">\
-				<a class="mui-tab-item" href="javascript:;">\
-					<span class="footer_icon"><img src="images/home.png" /></span>\
+				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+					<span class="footer_icon"><img src="/微圈/images/home.png" /></span>\
 					<span class="mui-tab-label">首页</span>\
 				</a>\
-				<a class="mui-tab-item" href="javascript:;">\
-					<span class="footer_icon"><img src="images/addCircle.png" /></span>\
+				<a class="mui-tab-item" @tap="open" href="./container/other/create_flock.html">\
+					<span class="footer_icon"><img src="/微圈/images/addCircle.png" /></span>\
 					<span class="mui-tab-label">建群</span>\
 				</a>\
-				<a class="mui-tab-item" href="javascript:;">\
-					<span class="footer_icon"><img src="images/circle.png" /></span>\
+				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+					<span class="footer_icon"><img src="/微圈/images/circle.png" /></span>\
 					<span class="mui-tab-label">朋友圈</span>\
 				</a>\
-				<a class="mui-tab-item" href="javascript:;">\
-					<span class="footer_icon"><img src="images/my.png" /></span>\
+				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+					<span class="footer_icon"><img src="/微圈/images/my.png" /></span>\
 					<span class="mui-tab-label">我的</span>\
 				</a>\
 			</nav>\
@@ -49,10 +52,11 @@ define([],function(require,exports,module){
 	});
 	
 	//打开搜索页面
-	function _open_search(){
-		
-		alert(22);
-		
+	function _open(_this){
+		var href = _this.target.href;
+		if(href && href != 'javascript::'){
+			window.location.href = href;
+		};
 	};
 	
 	//底部选项卡高亮

@@ -1,9 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<title>创建群新</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+
+<body>
+	<!--头底部-->
+	<div id="app">
+		<wang-header title="创建群新" back="true"></wang-header>
+		
+		<wang-footer></wang-footer>
+	</div>
+	
+	<div class="mui-content">
+	    
+	    <form action="#" method="post" class="flock_form" @submit.prevent="flock_submit">
+	    	
+	    	<input type="text" value="" placeholder="输入群名称" name="name" v-model="name"/>
+	    	
+	    	<div class="album_box">
+	    		<p>群相册</p>
+	    		<div class="file_btn_box">
+	    			<img src="../../images/album.png" />
+	    			<input type="file" accept="image/*" name="" id="" value="" />
+	    		</div>
+	    	</div>
+	    	
+	    	<p class="flock_icon"><img src="../../images/expression.png" /></p>
+	    	
+	    	<textarea name="desc" class="flock_textarea" placeholder="输入群简介"></textarea>
+	    	
+	    	<button class="submit mui-btn mui-btn-blue mui-btn-block">创建</button>
+	    </form>
+	    
+	</div>
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/create_flock.js');
+</script>
+</body>
 </html>
