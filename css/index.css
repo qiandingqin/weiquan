@@ -1,0 +1,36 @@
+html,body,p,h1,h2,h3,h4,h5,h6,form,input,button,ul,ol,li,dl,dd,dt,img{margin:0;padding:0;}
+li{list-style: none;}
+
+p.nodata{text-align: center;margin:30px;}
+[v-cloak]{display: none;}
+
+header.mui-bar{box-shadow: none;background:-webkit-linear-gradient(left,#7D7D7D 30%, #434343 75%, #2D2D2D 100%);}
+header.mui-bar a,header.mui-bar h1,header.mui-bar button{color:#FFF !important;}
+header.mui-bar span.search_btn{display: block;width:20px;height: 20px;float: right;margin-top:12px;background:url(../images/search.png);background-size:cover;}
+
+nav.footer{background: #F8F8F8;box-shadow: none;height:auto !important;}
+nav.footer span.mui-tab-label{font-size:12px;color:#555;}
+nav.footer span.footer_icon{display: block;width:22px;height:22px;margin:5px auto 0;}
+nav.footer span.footer_icon img{display: block;width:100%;height:100%;}
+
+/*首页 S*/
+
+
+div.banner{width:100%;}
+div.banner img{width:100%;display: block;}
+
+div.index_tab.mui-segmented-control{border:none;border-bottom: 1px solid #E1DEDF;}
+div.index_tab.mui-segmented-control a.mui-control-item{color:#3E3E3E;background:transparent;border: none;line-height:44px;}
+div.index_tab.mui-segmented-control a.mui-control-item.mui-active{color:#E58C75;border-bottom:2px solid #E58C75;}
+
+ul.theme_group li.mui-card{margin:0 0 10px 0;}
+ul.theme_group .mui-card-content{padding:5px 10px;}
+ul.theme_group .mui-card-content h3{font-size:18px;}
+ul.theme_group .mui-card-content p{margin-top:5px;color:#384145;}
+ul.theme_group .mui-card-content img{width:30%;height:100px;margin-right:2%;}
+ul.theme_group .mui-card-footer a{display: block;width:60px;line-height: 20px;border-radius: 10px;background-size: cover;font-size: 12px;text-indent: 2.5em;padding-top:1px;color:#8F8F8F;position: absolute;top:12px;}
+ul.theme_group .mui-card-footer a:nth-of-type(1){background-image: url(../images/share.png);right:220px;}
+ul.theme_group .mui-card-footer a:nth-of-type(2){background-image: url(../images/collect.png);right:150px;}
+ul.theme_group .mui-card-footer a:nth-of-type(3){background-image: url(../images/reply.png);right:80px;}
+ul.theme_group .mui-card-footer a:nth-of-type(4){background-image: url(../images/praise.png);right:10px;}
+/*首页 E*/

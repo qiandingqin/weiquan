@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>微圈</title>
+<link href="css/mui.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/index.css" />
+<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		
+		<!--头部 S-->
+		<wang-header title="微圈" search="true"></wang-header>
+		<!--头部 E-->
+		
+		<!--底部 S-->
+		<wang-footer></wang-footer>
+		<!--底部 E-->
+	</div>
+	
+	<div class="mui-content mui-scroll-wrapper" id="pullrefresh" style="margin-top:44px;padding-bottom:50px;">
+	    <div class="mui-scroll" id="datas">
+		    <!--横幅 S-->
+			<div class="banner">
+				<img src="images/banner.jpg"/>
+			</div>
+		    <!--横幅 E-->
+		    
+		    <!--选项卡 按钮 S-->
+		    <div class="mui-segmented-control index_tab">
+		        <a class="mui-control-item mui-active">热门</a>
+		        <a class="mui-control-item">最新</a>
+		    </div>
+		    <!--选项卡 按钮 E-->
+	    
+	    	<!--数据列表 S-->
+	    	<ul class="theme_group">
+		    	<li class="mui-card" v-for=" v in dataJson " v-cloak>
+					<div class="mui-card-header mui-card-media">
+						<img :src="v.member.avatar">
+						<div class="mui-media-body">
+							<span>{{v.member.name}}</span>
+							<p>发表于 {{v.member.addtime}}</p>
+						</div>
+					</div>
+					<div class="mui-card-content mui-row">
+						<h3>{{v.theme.theme_title}}</h3>
+						<p>{{v.theme.theme_text}}</p>
+						<img :src="pic" v-for="pic in v.theme.theme_image"/>
+					</div>
+					<div class="mui-card-footer">
+						<a href="javascript:;" @tap="share(v.theme)">
+							<span>分享</span>
+						</a>
+						<a href="javascript:;" @tap="collect(v.theme.id)">
+							<span>16</span>
+						</a>
+						<a href="javascript:;">
+							<span>71</span>
+						</a>
+						<a href="javascript:;" @tap="praise(v.theme.id)">
+							<span>102</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+			
+			<p class="nodata" v-if="!dataJson.length">暂无数据</p>
+			
+	    	<!--数据列表 E-->
+		</div>
+	</div>
+<script src="js/sea.js" type="text/javascript" charset="utf-8"></script>	
+<script src="js/mui.js"></script>
+<script type="text/javascript">
+	seajs.use('./js/index.js');
+</script>
+</body>
+</html>
