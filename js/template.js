@@ -1,4 +1,5 @@
-define([],function(require,exports,module){
+define(function(require,exports,module){
+	var Fn = require('./main.js').Fn;
 	/*头部模版
 	 * title 设置标题内容
 	 * mothod 设置不同的header内容 
@@ -60,10 +61,27 @@ define([],function(require,exports,module){
 	};
 	
 	//底部选项卡高亮
-	function _tab_active(){
-		
-		alert(2);
-		
+	window.onload = function(){
+		var navA = document.querySelectorAll('nav.mui-bar a');
+		var index = {
+			index : 0,
+			create_flock : 1,
+			friends : 2,
+			member : 3
+		};
+		//当前页面对应的按钮
+		var curA = navA[index[Fn.get_filename(null,true)]];
+		var curImg = curA.querySelector('img');
+		var old_src = curImg.src;
+		//文件名
+		var fileName = Fn.get_filename(old_src);
+		var name = fileName.split('.');
+		var newName = name[0] + '_active.' + name[1];
+		//组装新路径
+		var newPathArr = old_src.split('/');
+		newPathArr.splice(newPathArr.length-1);
+		curA.classList.add('color');
+		curImg.src = newPathArr.join('/') + '/' + newName;
 	};
 	
 });

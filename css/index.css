@@ -12,6 +12,7 @@ nav.footer{background: #F8F8F8;box-shadow: none;height:auto !important;}
 nav.footer span.mui-tab-label{font-size:12px;color:#555;}
 nav.footer span.footer_icon{display: block;width:22px;height:22px;margin:5px auto 0;}
 nav.footer span.footer_icon img{display: block;width:100%;height:100%;}
+nav.footer a.color span{color:#FB8B79;}
 
 div.mui-content{margin-top:44px;padding-bottom:50px;}
 /*首页 S*/
