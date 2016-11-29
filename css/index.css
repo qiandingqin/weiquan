@@ -48,3 +48,18 @@ form.flock_form .flock_icon{margin:20px 0 10px;}
 form.flock_form .flock_icon img{width: 30px;height: 30px;display: block;}
 form.flock_form textarea.flock_textarea{resize: none;height: 100px;border-radius: 5px;}
 /*创建新群 E*/
+
+/*朋友圈 S*/
+.friends.mui-content{padding:10px 10px 0;background: #FFF;}
+.friends.mui-content ul.mui-table-view:nth-last-child(1):after{height: 0;}
+#list_group h3{font-size: 16px;margin:10px 0;}
+#list_group li{padding:5px 0;}
+#list_group li a{margin:0;}
+#list_group li p.title{font-size:15px;color:#000;}
+#list_group li img.mui-media-object{width:60px;height:60px;max-width:initial;}
+#list_group li p.members span{margin-right:20px;}
+#list_group li p.members img{width:18px;height: 18px;}
+#list_group li button.friends_in{width:70px;height:25px;position: absolute;top:20px;right:5px;padding:0;}
+#list_group li button.friends_in.color{color:#DA3E42;border-color:#DA3E42;}
+
+/*朋友圈 E*/

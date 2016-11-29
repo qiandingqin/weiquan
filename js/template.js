@@ -27,15 +27,15 @@ define([],function(require,exports,module){
 		},
 		template : '\
 			<nav class="mui-bar mui-bar-tab footer">\
-				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+				<a class="mui-tab-item" @tap="open" href="/微圈/index.html">\
 					<span class="footer_icon"><img src="/微圈/images/home.png" /></span>\
 					<span class="mui-tab-label">首页</span>\
 				</a>\
-				<a class="mui-tab-item" @tap="open" href="./container/other/create_flock.html">\
+				<a class="mui-tab-item" @tap="open" href="/微圈/container/other/create_flock.html">\
 					<span class="footer_icon"><img src="/微圈/images/addCircle.png" /></span>\
 					<span class="mui-tab-label">建群</span>\
 				</a>\
-				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+				<a class="mui-tab-item" @tap="open" href="/微圈/container/circle/friends.html">\
 					<span class="footer_icon"><img src="/微圈/images/circle.png" /></span>\
 					<span class="mui-tab-label">朋友圈</span>\
 				</a>\
@@ -53,9 +53,9 @@ define([],function(require,exports,module){
 	
 	//打开搜索页面
 	function _open(_this){
-		var href = _this.target.href;
-		if(href && href != 'javascript::'){
-			window.location.href = href;
+		_this = _this.currentTarget;
+		if(_this.href && _this.href != 'javascript:;'){
+			window.location.href = _this.href;
 		};
 	};
 	
