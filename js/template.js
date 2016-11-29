@@ -39,7 +39,7 @@ define([],function(require,exports,module){
 					<span class="footer_icon"><img src="/微圈/images/circle.png" /></span>\
 					<span class="mui-tab-label">朋友圈</span>\
 				</a>\
-				<a class="mui-tab-item" @tap="open" href="javascript:;">\
+				<a class="mui-tab-item" @tap="open" href="/微圈/container/member/member.html">\
 					<span class="footer_icon"><img src="/微圈/images/my.png" /></span>\
 					<span class="mui-tab-label">我的</span>\
 				</a>\

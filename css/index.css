@@ -61,5 +61,13 @@ form.flock_form textarea.flock_textarea{resize: none;height: 100px;border-radius
 #list_group li p.members img{width:18px;height: 18px;}
 #list_group li button.friends_in{width:70px;height:25px;position: absolute;top:20px;right:5px;padding:0;}
 #list_group li button.friends_in.color{color:#DA3E42;border-color:#DA3E42;}
-
 /*朋友圈 E*/
+
+/*个人中心 S*/
+#member .mui-table-view:before,#member .mui-table-view:after{height: 0;}
+#member ul{margin-bottom: 10px;}
+#member .not_login li{padding:15px;}
+
+#member ul.link_btn li img{width:24px;height: 24px;float: left;}
+#member ul.link_btn li span{float: left;margin:3px 0px 0 10px;}
+/*个人中心 E*/
