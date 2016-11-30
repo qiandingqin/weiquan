@@ -10,11 +10,10 @@
 
 <body>
 	<!--头底部-->
-	<div id="app">
-		<wang-header title="群管理" back="true"></wang-header>
-	</div>
+<div id="app">
+	<wang-header title="群管理" back="true"></wang-header>
 	
-	<div class="mui-content flock_admin">
+	<div class="mui-content nopad nopadt flock_admin">
 	    
 	    <div id="segmentedControl" class="mui-segmented-control">
 			<a class="mui-control-item mui-active" href="#item1"> 基本设置  </a>
@@ -22,12 +21,11 @@
 			<a class="mui-control-item" href="#item3"> 成员管理 </a>
 			<a class="mui-control-item" href="#item4"> 群组转让 </a>
 		</div>
-	    
 	    <!--选项卡 内容 容器 S-->
 	    <!--基本设置 S-->
 		<div id="item1" class="mui-control-content mui-active">
 			<form action="#" method="post" class="flock_form" onsubmit="return false">
-		    	<input type="text" value="" placeholder="输入群名称" name="name" v-model="name"/>
+		    	<input type="text" value="" placeholder="宝马交流群" readonly name="name" v-model="name"/>
 		    	
 		    	<div class="album_box">
 		    		<p>群相册</p>
@@ -39,12 +37,36 @@
 		    	
 		    	<div class="set">
 		    		<div class="mui-clearfix">
-		    			<p class="mui-pull-left">浏览权限</p>
-		    			<p class="mui-pull-left checkbox">
+		    			<p class="mui-pull-left title">浏览权限</p>
+		    			<div class="mui-pull-left checkbox">
 		    				<input type="checkbox"/>
-		    				
-		    				<span class="mui-pull-left">所有人</span>
-		    			</p>
+		    				<p class="radius mui-pull-left"></p>
+		    				<span class="mui-pull-left text">所有人</span>
+		    			</div>
+		    			<div class="mui-pull-left checkbox">
+		    				<input type="checkbox"/>
+		    				<p class="radius mui-pull-left active"></p>
+		    				<span class="mui-pull-left text">仅成员</span>
+		    			</div>
+		    		</div>
+		    		
+		    		<div class="mui-clearfix">
+		    			<p class="mui-pull-left title">加入方式</p>
+		    			<div class="mui-pull-left checkbox">
+		    				<input type="checkbox"/>
+		    				<p class="radius mui-pull-left"></p>
+		    				<span class="mui-pull-left text">自由</span>
+		    			</div>
+		    			<div class="mui-pull-left checkbox">
+		    				<input type="checkbox"/>
+		    				<p class="radius mui-pull-left active"></p>
+		    				<span class="mui-pull-left text">审核</span>
+		    			</div>
+		    			<div class="mui-pull-left checkbox">
+		    				<input type="checkbox"/>
+		    				<p class="radius mui-pull-left active"></p>
+		    				<span class="mui-pull-left text">邀请</span>
+		    			</div>
 		    		</div>
 		    	</div>
 		    	
@@ -52,37 +74,60 @@
 		    	
 		    	<textarea name="desc" class="flock_textarea" placeholder="输入群简介"></textarea>
 		    	
-		    	<button class="submit mui-btn mui-btn-blue mui-btn-block block_button">提交</button>
+		    	<button @tap="_submitSet" class="submit mui-btn mui-btn-blue mui-btn-block block_button">提交</button>
 		    </form>
 		</div>
 		<!--基本设置 E-->
 		
 		<!--成员审核 S-->
-		<div id="item2" class="mui-control-content">
-			546456
+		<div id="item2" class="mui-control-content pad15 bgfff">
+			
+			<wang-members-list :data="data"></wang-members-list>
+			
+			<div class="flock_btns mui-clearfix">
+				<button @tap="_pass" class="mui-btn mui-btn-blue mui-pull-right">审核通过</button>
+				<button @tap="_refuse" class="mui-btn mui-btn-blue mui-pull-right">拒绝申请</button>
+			</div>
+			
 		</div>
 		<!--成员审核 E-->
 		
 		<!--成员管理 S-->
-		<div id="item3" class="mui-control-content">
-			8797897
+		<div id="item3" class="mui-control-content pad15 bgfff">
+			
+			<wang-members-activenums active="10" not_active="215"></wang-members-activenums>
+			
+			<wang-members-list :data="data"></wang-members-list>
+			
+			<div class="flock_btns mui-clearfix">
+				<button @tap="_removeMember" class="mui-btn mui-btn-blue mui-pull-right">踢出群组</button>
+				<button @tap="_setDeputyMain" class="mui-btn mui-btn-blue mui-pull-right">设为副群主</button>
+			</div>
+			
 		</div>
 		<!--成员管理 E-->
 		
 		<!--群组转让 S-->
-		<div id="item4" class="mui-control-content">
-			879789得到7
+		<div id="item4" class="mui-control-content pad15 bgfff">
+			
+			<wang-members-activenums active="10" not_active="215"></wang-members-activenums>
+			
+			<wang-members-list :data="data"></wang-members-list>
+			
+			<div class="flock_btns mui-clearfix">
+				<button @tap="_setNewMain" class="mui-btn mui-btn-blue mui-pull-right">设为新群主</button>
+			</div>
+			
 		</div>
 		<!--群组转让 E-->
 	    <!--选项卡 内容 容器 E-->
-	    
 	</div>
-	
+</div>	
 <script src="../../js/mui.min.js"></script>
 <script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	seajs.use('../../js/create_flock.js');
+	seajs.use('../../js/flock_main.js');
 </script>
 </body>
 </html>

@@ -1,9 +1,12 @@
 html,body,p,h1,h2,h3,h4,h5,h6,form,input,button,ul,ol,li,dl,dd,dt,img{margin:0;padding:0;}
 li{list-style: none;}
+i{font-style: none;}
 
 p.nodata{text-align: center;margin:30px;}
 [v-cloak]{display: none;}
 .block_button{height: 30px;line-height: 3px;font-size:16px;}
+.pad15{padding:15px;}
+.bgfff{background: #fff;}
 
 header.mui-bar{box-shadow: none;background:-webkit-linear-gradient(left,#7D7D7D 30%, #434343 75%, #2D2D2D 100%);}
 header.mui-bar a,header.mui-bar h1,header.mui-bar button{color:#FFF !important;}
@@ -16,6 +19,8 @@ nav.footer span.footer_icon img{display: block;width:100%;height:100%;}
 nav.footer a.color span{color:#FB8B79;}
 
 div.mui-content{margin-top:44px;padding-bottom:50px;}
+div.mui-content.nopad{padding-bottom:0;}
+div.mui-content.nopadt{padding-top:0;}
 /*首页 S*/
 
 
@@ -100,11 +105,39 @@ form.flock_form textarea.flock_textarea{resize: none;height: 100px;border-radius
 .flock_admin #segmentedControl a.mui-active{background: transparent;color:#2BA4EC;border-bottom:3px solid #31A5E4;}
 
 /*基本设置 S*/
-.flock_admin .set{background:#FFF;padding-bottom: 15px;}
-.flock_admin .set .checkbox{position: relative;border: 1px solid red;}
+
+.flock_admin form.flock_form{padding-bottom: 0;}
+.flock_admin form.flock_form .album_box{padding-bottom:0;}
+.flock_admin form.flock_form .flock_icon{margin:10px 0;}
+.flock_admin form.flock_form textarea.flock_textarea{height: 90px;}
+
+.flock_admin .set{background:#FFF;padding:0 0 5px 10px;}
+.flock_admin .set .checkbox{position: relative;margin:0 10px 10px 0;}
+.flock_admin .set  p.title{color:#000;font-size:16px;margin-right:10px;}
 .flock_admin .set input[type=checkbox]{opacity: 0;position: absolute;left:0;top:0;width:100%;z-index:10;height:100%;display: block;}
+.flock_admin .set .radius{width:16px;height: 16px;margin:1px 5px 0 0;background:url("../images/chekbox.png");background-size:cover;}
+.flock_admin .set .radius.active{background-image: url("../images/chekbox_active.png");}
+.flock_admin .set .checkbox span.text{font-size:14px;}
 
 .flock_admin button.submit{width:35%;margin:0 auto;}
 /*基本设置 E*/
+
+/*成员管理 S*/
+.flock_admin .search_box{border: 1px solid #F1F1F1;position: relative;border-radius:3px;}
+.flock_admin .search_box input{font-size:14px;margin-bottom:0;border:none;}
+.flock_admin .search_box a{display:block;font-size:14px;width:80px;height:30px;padding-top:5px;color:#FFF;background:#34A4E4;border-radius: 5px; position: absolute;right:5px;top:5px;}
+.flock_admin .search_box a i{margin:0px 2px 0 10px;font-size:20px;}
+
+.flock_admin .nums{font-size:16px;color:#888888;margin:10px 0;}
+.flock_admin .nums span{padding:5px 6px 2px;border-radius: 3px;margin-right:10px;font-size:14px;}
+.flock_admin .nums span:nth-of-type(1){background:#36A4E6;color:#FFF;}
+
+.flock_admin ul.flock_members{border:1px solid #F1F1F1;border-radius:3px;margin-bottom:10px;}
+.flock_admin .flock_members li{width:20%;float: left;padding:5px;height:83px;margin-bottom:5px;}
+.flock_admin .flock_members li img{width:100%;display: block;}
+.flock_admin .flock_members li p{text-align: center;margin-top:5px;}
+.flock_admin .flock_btns button{margin-right:10px;}
+.flock_admin .flock_btns button:nth-child(1){margin-right:0px;}
+/*成员管理 E*/
 
 /*群管理 E*/

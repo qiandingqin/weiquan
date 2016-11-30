@@ -48,6 +48,18 @@ define(function(require,exports,module){
 		'
 	});
 	
+	Vue.component('wang-members-list',{
+		props :['data'],
+		template : '\
+			<ul class="flock_members pad15 mui-clearfix">\
+				<li>\
+					<label for="members_checkbox"><img src="../../images/test1.jpg" /></label>\
+					<p><input type="checkbox" id="members_checkbox" /></p>\
+				</li>\
+			</ul>\
+		',
+	});
+	
 	new Vue({
 		el : '#app'
 	});
