@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>群管理</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+
+<body>
+	<!--头底部-->
+	<div id="app">
+		<wang-header title="群管理" back="true"></wang-header>
+	</div>
+	
+	<div class="mui-content flock_admin">
+	    
+	    <div id="segmentedControl" class="mui-segmented-control">
+			<a class="mui-control-item mui-active" href="#item1"> 基本设置  </a>
+			<a class="mui-control-item" href="#item2"> 成员审核 </a>
+			<a class="mui-control-item" href="#item3"> 成员管理 </a>
+			<a class="mui-control-item" href="#item4"> 群组转让 </a>
+		</div>
+	    
+	    <!--选项卡 内容 容器 S-->
+	    <!--基本设置 S-->
+		<div id="item1" class="mui-control-content mui-active">
+			<form action="#" method="post" class="flock_form" onsubmit="return false">
+		    	<input type="text" value="" placeholder="输入群名称" name="name" v-model="name"/>
+		    	
+		    	<div class="album_box">
+		    		<p>群相册</p>
+		    		<div class="file_btn_box">
+		    			<img src="../../images/album.png" />
+		    			<input type="file" accept="image/*" name="" id="" value="" />
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="set">
+		    		<div class="mui-clearfix">
+		    			<p class="mui-pull-left">浏览权限</p>
+		    			<p class="mui-pull-left checkbox">
+		    				<input type="checkbox"/>
+		    				
+		    				<span class="mui-pull-left">所有人</span>
+		    			</p>
+		    		</div>
+		    	</div>
+		    	
+		    	<p class="flock_icon"><img src="../../images/expression.png" /></p>
+		    	
+		    	<textarea name="desc" class="flock_textarea" placeholder="输入群简介"></textarea>
+		    	
+		    	<button class="submit mui-btn mui-btn-blue mui-btn-block block_button">提交</button>
+		    </form>
+		</div>
+		<!--基本设置 E-->
+		
+		<!--成员审核 S-->
+		<div id="item2" class="mui-control-content">
+			546456
+		</div>
+		<!--成员审核 E-->
+		
+		<!--成员管理 S-->
+		<div id="item3" class="mui-control-content">
+			8797897
+		</div>
+		<!--成员管理 E-->
+		
+		<!--群组转让 S-->
+		<div id="item4" class="mui-control-content">
+			879789得到7
+		</div>
+		<!--群组转让 E-->
+	    <!--选项卡 内容 容器 E-->
+	    
+	</div>
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/create_flock.js');
+</script>
+</body>
+</html>

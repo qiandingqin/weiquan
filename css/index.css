@@ -3,6 +3,7 @@ li{list-style: none;}
 
 p.nodata{text-align: center;margin:30px;}
 [v-cloak]{display: none;}
+.block_button{height: 30px;line-height: 3px;font-size:16px;}
 
 header.mui-bar{box-shadow: none;background:-webkit-linear-gradient(left,#7D7D7D 30%, #434343 75%, #2D2D2D 100%);}
 header.mui-bar a,header.mui-bar h1,header.mui-bar button{color:#FFF !important;}
@@ -92,3 +93,18 @@ form.flock_form textarea.flock_textarea{resize: none;height: 100px;border-radius
 #login .login_icon_group a:nth-of-type(2) img{margin-left:10px;}
 #login .login_icon_group a img{width:50%;}
 /*登录 E*/
+
+/*群管理 S*/
+.flock_admin #segmentedControl{border:none;border-radius: 0;font-size:14px;}
+.flock_admin #segmentedControl a{border:none;color:#646464;border-bottom:2px solid #D2D2D2;}
+.flock_admin #segmentedControl a.mui-active{background: transparent;color:#2BA4EC;border-bottom:3px solid #31A5E4;}
+
+/*基本设置 S*/
+.flock_admin .set{background:#FFF;padding-bottom: 15px;}
+.flock_admin .set .checkbox{position: relative;border: 1px solid red;}
+.flock_admin .set input[type=checkbox]{opacity: 0;position: absolute;left:0;top:0;width:100%;z-index:10;height:100%;display: block;}
+
+.flock_admin button.submit{width:35%;margin:0 auto;}
+/*基本设置 E*/
+
+/*群管理 E*/
