@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头底部-->
+	<div id="app">
+		<wang-header title="登录" back="true"></wang-header>
+	</div>
+	
+	<div class="mui-content login" id="login">
+		
+		<form action="#" method="post" onsubmit="return false;">
+			
+			<div class="oauth_input_box">
+				<span class="icon" style="width:16px;"><img src="../../images/mobile.png" /></span>
+				<input type="text" name="" id="" value="" placeholder="请输入手机号"/>
+			</div>
+			
+			<div class="oauth_input_box">
+				<span class="icon" style="height: 15px;top:30px;"><img src="../../images/identifying.png" /></span>
+				<input type="text" class="mui-input-password" name="" id="" value="" placeholder="验证码"/>
+				<button class="mui-btn mui-btn-blue code">获取验证码</button>
+			</div>
+			
+			<button class="mui-btn mui-btn-block mui-btn-blue submit_btn">下一步</button>
+		</form>
+	</div>
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/friends.js');
+</script>
+</body>
+</html>
