@@ -63,6 +63,7 @@ define(function(require,exports,module){
 	//底部选项卡高亮
 	window.onload = function(){
 		var navA = document.querySelectorAll('nav.mui-bar a');
+		if(!navA.length)return;
 		var index = {
 			index : 0,
 			create_flock : 1,

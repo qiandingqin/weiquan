@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<!--头底部-->
+	<div id="app">
+		<wang-header title="登录" back="true"></wang-header>
+	</div>
+	
+	<div class="mui-content login" id="login">
+		
+		<form action="#" method="post" onsubmit="return false;">
+			
+			<div class="oauth_input_box">
+				<span class="icon"><img src="../../images/user.png" /></span>
+				<input type="text" name="" id="" value="" placeholder="用户名/手机号"/>
+			</div>
+			
+			<div class="oauth_input_box mui-input-row mui-password">
+				<span class="icon"><img src="../../images/pwd.png" /></span>
+				<input type="password" class="mui-input-password" name="" id="" value="" placeholder="密码"/>
+				<span class="mui-icon mui-icon-eye"></span>
+			</div>
+			
+			<button class="mui-btn mui-btn-block mui-btn-blue">登录</button>
+		</form>
+		
+		<p class="mui-clearfix">
+			<a class="mui-pull-left">立即注册</a>
+			<a class="mui-pull-right">忘记密码</a>
+		</p>
+		
+		<p class="text">使用第三方账号登录</p>
+		
+		<div class="login_icon_group mui-clearfix">
+			<a class="login_icon_box mui-pull-left"><img src="../../images/qq.png" class="mui-pull-right"/></a>
+			<a class="login_icon_box mui-pull-left"><img src="../../images/wx.png" class="mui-pull-left"/></a>
+		</div>
+		
+	</div>
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/friends.js');
+</script>
+</body>
+</html>
