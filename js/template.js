@@ -32,7 +32,7 @@ define(function(require,exports,module){
 					<span class="footer_icon"><img src="/微圈/images/home.png" /></span>\
 					<span class="mui-tab-label">首页</span>\
 				</a>\
-				<a class="mui-tab-item" @tap="open" href="/微圈/container/other/create_flock.html">\
+				<a class="mui-tab-item" @tap="open" href="/微圈/container/flock/create_flock.html">\
 					<span class="footer_icon"><img src="/微圈/images/addCircle.png" /></span>\
 					<span class="mui-tab-label">建群</span>\
 				</a>\
