@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="bgfff">
+<head>
+	<meta charset="UTF-8">
+	<title>评论/回复</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../css/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+	<style type="text/css">
+		.reply{background: #FFF;}
+		i{font-style: normal;}
+		i.wang-icon-font:before{font-size:12px;font-weight:100;padding:4px 5px;background:#FCB200;border-radius: 3px;color:#FFF;position: relative;top:-2px}
+		i.wang-icon-ding:before{content: '顶';background:#FCB200;}
+		i.wang-icon-jing:before{content: '精';background:#848DFC;}
+		i.wang-icon-v{background: #FB88C4;color:#FFF;padding:0px 2px;border-radius: 3px;}
+		i.wang-icon-v:before{content: 'V';font-size:16px;font-family: 'Agnes-Bold75f90b7eb175ad';}
+		i.wang-icon-v cite{font-size:10px;-webkit-transform: scale(0.5833333333333334);}
+		ul.mui-table-view.raply_group:before,ul.mui-table-view.raply_group:after{height: 0;}
+		ul#raply_group{width:90%;background:#EEEEEE;border-radius:3px;padding:0 10px 0 8%;margin:0 auto;}
+		ul#raply_group li{padding:5px 0;background: #EEEEEE;overflow: initial;}
+		ul#raply_group li:after{color:#E6E6E6;left:0;}
+		ul#raply_group li a{margin:0;}
+		ul#raply_group li.all_img>img.img{width:42px;height: 42px;margin-right:10px;}
+		.raply_group span.raply_nickname{max-width:50%;}
+		.raply_group span.raply_time{font-size:13px;color:#B5B5B5;}
+		.raply_group p.reply_content{width:100%;}
+		.raply_group img.raply_icon{width:16px;position: absolute;left:-7%;top:35%;}
+		
+		.reply .reply_msg_box{width:100%;height:45px;border-top: 1px solid #E8E8E8;position:fixed;left:0;bottom: 0;background: #FFF;}
+		.reply .reply_msg_box input{width:75%;position: absolute;left:0;top:0;border:none;border-bottom:1px solid #A9D19D;}
+		.reply .reply_msg_box .msg_btn{width:25%;height:40px;position:absolute; right:0;top:0;}
+		.reply .reply_msg_box .msg_btn img{width:30%;margin-top:7px;}
+		.reply .reply_msg_box .msg_btn button{width:50%;height:80%;margin-top:5px;}
+	</style>
+</head>
+<body>
+	<!--头底部-->
+	<div id="app">
+		<wang-header title="评论/回复" back="true"></wang-header>
+	</div>
+	
+	<div class="mui-content reply bgfff">
+		
+		<ul class="theme_group">
+	    	<li class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="http://p5.gexing.com/GSF/touxiang/20161124/1808/5836bc2833093.jpg@!200x200_3?recache=20131108">
+					<div class="mui-media-body">
+						<span style="font-size: 16px;">群草<i class="wang-icon-v"><cite>12</cite></i></span>
+						<p>2016年11月10日 12:02</p>
+					</div>
+				</div>
+				<div class="mui-card-content mui-row">
+					<h3>
+						<i class="wang-icon-font wang-icon-jing"></i>
+						<i class="wang-icon-font wang-icon-ding"></i>
+						挨个萌妹看过来
+					</h3>
+					<p>净身高153~穿鞋157把。平常的穿搭术语可爱风~这是森女部落的卫衣+34cm的短裙~毕竟...</p>
+					<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+					<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+					<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+				</div>
+			</li>
+		</ul>
+		
+		<!--回复列表 S-->
+		<ul class="mui-table-view raply_group" id="raply_group">
+			<li class="mui-table-view-cell mui-media all_img">
+				<img class="img" src="../../images/test2.jpg"/>
+				<img class="img" src="../../images/test1.jpg"/>
+				<img class="img" src="../../images/test3.jpg"/>
+				<img class="raply_icon" src="../../images/core.png" />
+			</li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="http://p5.gexing.com/GSF/touxiang/20161124/1808/5836bc2833093.jpg@!200x200_3?recache=20131108">
+		            <div class="mui-media-body">
+		                <span class="mui-pull-left raply_nickname mui-ellipsis">幸福</span>
+		                <span class="mui-pull-right raply_time">2016-05-05 10:35:12</span>
+		                <p class="mui-ellipsis mui-pull-left reply_content">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+		            </div>
+		        </a>
+		        <img class="raply_icon" src="../../images/core.png" />
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="http://p5.gexing.com/GSF/touxiang/20161124/1808/5836bc2833093.jpg@!200x200_3?recache=20131108">
+		            <div class="mui-media-body">
+		                <span class="mui-pull-left raply_nickname mui-ellipsis">幸福</span>
+		                <span class="mui-pull-right raply_time">2016-05-05 10:35:12</span>
+		                <p class="mui-ellipsis mui-pull-left reply_content">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+		            </div>
+		        </a>
+		    </li>
+		</ul>
+		<!--回复列表 E-->
+		
+		<!--回复消息 S-->
+		<div class="reply_msg_box">
+			<input type="text" placeholder="回复"/>
+			<div class="msg_btn">
+				<img src="../../images/expression.png" />
+				<button>发送</button>
+			</div>
+		</div>
+		<!--回复消息 E-->
+		
+	</div>
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/friends.js');
+	
+</script>
+</body>
+</html>
