@@ -1,5 +1,6 @@
 define(function(require,exports,module){
-	
+	//头部部
+	require('./template.js');
 	//加载html组件
 	require('./template_members.js');
 	//模拟数据

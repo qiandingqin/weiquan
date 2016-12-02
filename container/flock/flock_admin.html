@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-control="flock_main">
 <head>
 	<meta charset="UTF-8">
 	<title>群管理</title>
@@ -10,9 +10,9 @@
 
 <body>
 	<!--头底部-->
-<div id="app">
-	<wang-header title="群管理" back="true"></wang-header>
-	
+	<div id="app">
+		<wang-header title="群管理" back="true"></wang-header>
+	</div>
 	<div class="mui-content nopad nopadt flock_admin">
 	    
 	    <div id="segmentedControl" class="mui-segmented-control">
@@ -122,12 +122,12 @@
 		<!--群组转让 E-->
 	    <!--选项卡 内容 容器 E-->
 	</div>
-</div>	
 <script src="../../js/mui.min.js"></script>
 <script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="//cdn.bootcss.com/vue/2.1.3/vue.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	seajs.use('../../js/flock_main.js');
+	seajs.use('../../js/main.js');
 </script>
 </body>
 </html>

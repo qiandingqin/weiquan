@@ -1,5 +1,5 @@
 define(function(require,exports,module){
-	var Fn = require('./main.js').Fn;
+	var Fn = require('./function.js').Fn;
 	/*头部模版
 	 * title 设置标题内容
 	 * mothod 设置不同的header内容 
