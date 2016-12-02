@@ -1,7 +1,7 @@
 //评论,回复列表模块
 define(function(require,exports,module){
 	
-	var Fn = require('function').Fn;
+	var Fn = require('fn').Fn;
 	//上拉加载 分页
 	Fn.mui_up(function(){
 		var _this = this;

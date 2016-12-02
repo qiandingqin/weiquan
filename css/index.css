@@ -8,9 +8,12 @@ p.nodata{text-align: center;margin:30px;}
 .pad15{padding:15px;}
 .bgfff{background: #fff;}
 
+/*临时隐藏下拉刷新的文字*/
+.noduwntext .mui-pull-top-pocket{display: none !important;}
+
 header.mui-bar{box-shadow: none;background:-webkit-linear-gradient(left,#7D7D7D 30%, #434343 75%, #2D2D2D 100%);}
 header.mui-bar a,header.mui-bar h1,header.mui-bar button{color:#FFF !important;}
-header.mui-bar span.search_btn{display: block;width:20px;height: 20px;float: right;margin-top:12px;background:url(../images/search.png);background-size:cover;}
+header.mui-bar .search_btn{display: block;width:20px;height: 20px;float: right;margin-top:12px;background:url(../images/search.png);background-size:cover;}
 
 nav.footer{background: #F8F8F8;box-shadow: none;height:auto !important;}
 nav.footer span.mui-tab-label{font-size:12px;color:#555;}
@@ -141,3 +144,12 @@ form.flock_form textarea.flock_textarea{resize: none;height: 100px;border-radius
 /*成员管理 E*/
 
 /*群管理 E*/
+
+/*评论/回复 S*/
+.reply li.raply_box .mui-media-body{position: relative;}
+.reply li.raply_box a>img{max-width:initial;height: 60px;}
+.reply li.raply_box .mui-media-body p{width:72%;}
+.reply li.raply_box .mui-media-body p:nth-of-type(1){color:#81848D;font-size:15px;}
+.reply li.raply_box .mui-media-body p:nth-of-type(2){color:#404040;}
+.reply li.raply_box .mui-media-body img{max-width:60px;height: 60px;position: absolute;right:0;top:0;}
+/*评论/回复 E*/

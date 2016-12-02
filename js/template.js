@@ -1,5 +1,5 @@
 define(function(require,exports,module){
-	var Fn = require('./function.js').Fn;
+	var Fn = require('fn').Fn;
 	/*头部模版
 	 * title 设置标题内容
 	 * mothod 设置不同的header内容 
@@ -15,7 +15,7 @@ define(function(require,exports,module){
 							<span class="mui-icon mui-icon-left-nav"></span>\
 							<span class="header_text">返回 </span>\
 						</button>\
-						<span class="search_btn" v-if="search" @click="open" href=""></span>\
+						<a class="search_btn" v-if="search" @click="open"></a>\
 					</header>',
 		methods:{
 			open : _open,
@@ -66,14 +66,15 @@ define(function(require,exports,module){
 	
 	//打开搜索页面
 	function _open(_this){
-		_this = _this.currentTarget;
+		/*_this = _this.currentTarget;
 		if(_this.href && _this.href != 'javascript:;'){
 			window.location.href = _this.href;
-		};
+		};*/
 	};
 	
 	//底部选项卡高亮
-	window.onload = function(){
+	mui.ready(function(){
+		
 		var navA = document.querySelectorAll('nav.mui-bar a');
 		if(!navA.length)return;
 		var index = {
@@ -95,6 +96,7 @@ define(function(require,exports,module){
 		newPathArr.splice(newPathArr.length-1);
 		curA.classList.add('color');
 		curImg.src = newPathArr.join('/') + '/' + newName;
-	};
+			
+	});
 	
 });

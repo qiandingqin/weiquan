@@ -17,6 +17,12 @@ define(function(require,exports,module){
 					up: {
 						contentrefresh: '正在加载...',
 						callback: cb
+					},
+					down : {
+						callback : function(){
+							//window.location.reload();
+							this.endPulldownToRefresh();
+						}
 					}
 				}
 			});
