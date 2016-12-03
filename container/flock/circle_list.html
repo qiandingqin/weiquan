@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html data-control="circle_list">
+<head>
+	<meta charset="UTF-8">
+	<title>宝马交流群</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index.css"/>
+</head>
+<body>
+	<div id="app">
+		<wang-header back="true" title="宝马交流群" menu="true"></wang-header>
+	</div>
+	
+	<div class="mui-content circle_list">
+	    
+	    <div class="circle_info" id="list_group">
+	    	<ul class="mui-table-view">
+	    	    <li class="mui-table-view-cell mui-media">
+	    	        <a href="javascript:;">
+	    	            <img class="mui-media-object mui-pull-left" src="../../images/test1.jpg">
+	    	            <div class="mui-media-body">
+	    	                <p class="mui-ellipsis title">宝马交流群</p>
+	    	                <p class="members">
+	    	                	<span>主题: 114</span>
+	    	                	<span>成员: 220</span>
+	    	                </p>
+	    	                <p class="mui-ellipsis">关注宝马车</p>
+	    	                <button type="button" class="friends_in mui-btn">加入朋友圈</button>
+	    	            </div>
+	    	        </a>
+	    	    </li>
+	    	</ul>
+	    </div>
+	    
+	    <!--选项卡 按钮 S-->
+	    <div class="mui-segmented-control index_tab">
+	        <a class="mui-control-item mui-active">热门主题</a>
+	        <a class="mui-control-item">热门问答</a>
+	    </div>
+	    <!--选项卡 按钮 E-->
+	    
+	    <!--滚动区域 S-->
+	    <div class="mui-scroll-wrapper noduwntext" id="pullrefresh">
+	    	
+	    	<div class="mui-scroll">
+	    		
+	    		<ul class="mui-table-view news">
+    		        <li class="mui-table-view-cell">
+    		            <a href="javascript:;">
+    		                <i class="wang-icon-font wang-icon-re"></i>
+    		                <span style="width:67%;display: inline-block;" class="mui-ellipsis">李克强:无特殊原因政府文件必须7天内必</span>
+    		                <span class="mui-pull-right">2015-01-01</span>
+    		            </a>
+    		        </li>
+    		        <li class="mui-table-view-cell">
+    		            <a href="javascript:;">
+    		                <i class="wang-icon-font wang-icon-re"></i>
+    		                <span style="width:67%;display: inline-block;" class="mui-ellipsis">李克强:无特殊原因政府文件必须7天内必</span>
+    		                <span class="mui-pull-right">2015-01-01</span>
+    		            </a>
+    		        </li>
+    		        <li class="mui-table-view-cell">
+    		            <a href="javascript:;">
+    		                <i class="wang-icon-font wang-icon-re"></i>
+    		                <span style="width:67%;display: inline-block;" class="mui-ellipsis">李克强:无特殊原因政府文件必须7天内必</span>
+    		                <span class="mui-pull-right">2015-01-01</span>
+    		            </a>
+    		        </li>
+    		    </ul>
+	    		
+	    		<ul class="theme_group">
+			    	<li class="mui-card">
+						<div class="mui-card-header mui-card-media">
+							<img src="http://p5.gexing.com/GSF/touxiang/20161124/1808/5836bc2833093.jpg@!200x200_3?recache=20131108">
+							<div class="mui-media-body">
+								<span>群草</span>
+								<p>发表于 2015-01-01</p>
+							</div>
+						</div>
+						<div class="mui-card-content mui-row">
+							<h3>挨个萌妹看过来</h3>
+							<p>净身高153~穿鞋157把。平常的穿搭术语可爱风~这是森女部落的卫衣+34cm的短裙~毕竟...</p>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+						</div>
+						<div class="mui-card-footer">
+							<a href="javascript:;" @tap="share(v.theme)"> <span>分享</span> </a>
+							<a href="javascript:;" @tap="collect(v.theme.id)"> <span>16</span> </a>
+							<a href="javascript:;"> <span>71</span> </a>
+							<a href="javascript:;" @tap="praise(v.theme.id)"> <span>102</span> </a>
+						</div>
+					</li>
+					<li class="mui-card">
+						<div class="mui-card-header mui-card-media">
+							<img src="http://p5.gexing.com/GSF/touxiang/20161124/1808/5836bc2833093.jpg@!200x200_3?recache=20131108">
+							<div class="mui-media-body">
+								<span>群草</span>
+								<p>发表于 2015-01-01</p>
+							</div>
+						</div>
+						<div class="mui-card-content mui-row">
+							<h3>挨个萌妹看过来</h3>
+							<p>净身高153~穿鞋157把。平常的穿搭术语可爱风~这是森女部落的卫衣+34cm的短裙~毕竟...</p>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+							<img src="http://img1.gtimg.com/gamezone/pics/hv1/67/86/2069/134558722.jpg"/>
+						</div>
+						<div class="mui-card-footer">
+							<a href="javascript:;" @tap="share(v.theme)"> <span>分享</span> </a>
+							<a href="javascript:;" @tap="collect(v.theme.id)"> <span>16</span> </a>
+							<a href="javascript:;"> <span>71</span> </a>
+							<a href="javascript:;" @tap="praise(v.theme.id)"> <span>102</span> </a>
+						</div>
+					</li>
+				</ul>
+				
+	    	</div>
+	    	
+	    </div>
+	    <!--滚动区域 E-->
+	    
+	</div>
+	
+	<!--顶部菜单 S-->
+	<div class="top_menu mui-hidden">
+		<ul class="mui-table-view">
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="./flock_admin.html">
+	            	<img src="../../images/menu_set.png" />
+	            	<span>群设置</span>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="javascript:;">
+	            	<img src="../../images/menu_er.png" />
+	            	<span>群二维码</span>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="javascript:;">
+	            	<img src="../../images/menu_look.png" />
+	            	<span>查看群成员</span>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="javascript:;">
+	            	<img src="../../images/menu_search.png" />
+	            	<span>搜索</span>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="javascript:;">
+	            	<img src="../../images/menu_invite.png" />
+	            	<span>邀请好友</span>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-ellipsis">
+	            <a href="javascript:;">
+	            	<img src="../../images/menu_complaint.png" />
+	            	<span>投诉</span>
+	            </a>
+	        </li>
+	    </ul>
+	    <span class="cleose_menu mui-icon mui-icon-closeempty"></span>
+	</div>
+	<!--顶部菜单 E-->
+	
+	<!--发布按钮 S-->
+	<a href="#sheet" id="openSheet"><img src="../../images/release_theme.png" /></a>
+	<!--发布按钮 E-->
+	
+	<!--发布按钮组 S-->
+	<div id="sheet" class="mui-popover mui-popover-bottom mui-popover-action">
+	    <!-- 可选择菜单 -->
+	    <ul class="mui-row">
+	      <li class="mui-col-sm-4 mui-col-xs-4">
+	        <a href="../theme/release.html">
+	        	<img src="../../images/release_img.png" />
+	        	<span>发布图文</span>
+	        </a>
+	      </li>
+	      <li class="mui-col-sm-4 mui-col-xs-4">
+	        <a href="../theme/release.html">
+	        	<img src="../../images/release_ask.png" />
+	        	<span>我要提问</span>
+	        </a>
+	      </li>
+	      <li class="mui-col-sm-4 mui-col-xs-4">
+	        <a href="#sheet">
+	        	<img src="../../images/release_red.png" />
+	        	<span>发群红包</span>
+	        </a>
+	      </li>
+	    </ul>
+	    <!-- 取消菜单 -->
+	    <div class="mui-table-view">
+	        <a href="#sheet"><img src="../../images/close.png"/></a>
+	    </div>
+	</div>
+	<!--发布按钮组 E-->
+	
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/sea.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	seajs.use('../../js/main.js');
+	//临时
+	document.querySelector('.top_menu .cleose_menu').addEventListener('tap',function(){
+		this.parentNode.classList.add('mui-hidden');
+	});
+	
+//	mui('#sheet1').popover('toggle');
+</script>
+</body>
+</html>

@@ -17,17 +17,21 @@ define(function(require,exports,module){
 	if(control)require.async('./{control}.js');
 	
 	//处理mui库在某些情况下拦截了a标签跳转
-	window.onload = function(){
+	mui.ready(function(){
 		
 		mui('body').on('tap','a',function(){
 			
 			if(this.href && this.href != 'javascript:;'){
-				alert(this.href);return;
 				window.location.href = this.href;
 			};
 			
 		});
 		
+		mui('body').on('tap','[data-href]',function(){
+			if(this.dataset.href){
+				window.location.href = this.dataset.href
+			};
+		});
 		
-	};
+	});
 });

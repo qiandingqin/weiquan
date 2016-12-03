@@ -2,23 +2,30 @@ define(function(require,exports,module){
 	var Fn = require('fn').Fn;
 	/*头部模版
 	 * title 设置标题内容
-	 * mothod 设置不同的header内容 
-	 * mothod = ordinary 带返回按钮 与标题
-	 * mothod = search 带返回按钮 与标题 与搜索按钮
-	 * mothod = title 只有标题
+	 * search = true 显示搜索按钮
+	 * back = true 显示后退按钮
 	 */
 	Vue.component('wang-header',{
-		props:['title','search','ordinary','back'],
+		props:['title','search','ordinary','back','search_text','menu'],
 		template : '<header id="header" class="mui-bar mui-bar-nav">\
 						<h1 class="mui-title">{{title}}</h1>\
 						<button v-if="back" class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">\
 							<span class="mui-icon mui-icon-left-nav"></span>\
 							<span class="header_text">返回 </span>\
 						</button>\
-						<a class="search_btn" v-if="search" @click="open"></a>\
+						<a class="search_btn" v-if="search" href="/微圈/container/theme/search.html"></a>\
+						<a class="search_text mui-pull-right" v-if="search_theme" @tap="search_theme">{{search_text}}</a>\
+						<a class="mui-icon mui-icon-bars mui-pull-right" v-if="menu" @tap="openMenu"></a>\
 					</header>',
 		methods:{
 			open : _open,
+			search_theme : function(){
+				alert('搜索主题');
+			},
+			openMenu : function(){
+				var topMenu = document.querySelector('div.top_menu');
+				topMenu.classList.remove('mui-hidden');
+			}
 		}
 	});
 	
