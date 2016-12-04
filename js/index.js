@@ -15,7 +15,6 @@ define(function(require){
 	//加载头,底部模版
 	require('./template.js');
 	
-	
 	getData();
 	
 	function getData(){
